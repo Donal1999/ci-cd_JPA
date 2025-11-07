@@ -15,4 +15,9 @@ public class PersonController {
     public Person create(@Valid @RequestBody Person person){
         return service.create(person);
     }
+
+    @GetMapping("/{id}")
+    public Person byEmployeeId(@PathVariable String id){
+        return service.findByEmployeeId(id);
+    }
 }
